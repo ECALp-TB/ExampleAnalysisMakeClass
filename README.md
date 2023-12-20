@@ -70,4 +70,16 @@ Examples of how to run this are in example.sh
 
 > source example.sh
 
+### 5 Run using condor_ht (parallel jobs)
+
+You can run the Example.cc scripts in a farm managed by condor, using the example_condor.sh
+
+> source example_condor.sh "../../../TB2022/data/calice-c75.root" 10
+
+Of course, this particular example does nothing since we are only writing the result in terminal but this job is not running in our interface but in a remote core.
+To check that the script has run successfully, you can check the recently created folder log/
+For example, the file: ls log/outfile_test_condor.txt 
+
+More info on condor_ht https://htcondor.readthedocs.io/en/latest/users-manual/quick-start-guide.html
+
 
